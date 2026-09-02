@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria-LucasBenitez-Contacto</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" aria-label="Vinculo al inicio">
+             <img src="./recursos/imagenes/cybersecurity.webp" alt="Logo ciberseguridad">
+        </a>
+        <nav>
+            <a href="./index.html">
+                Informacion
+            </a>
+            
+            <a href="./contactos.html">
+                Contactos
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Solicitud de Consulta y Presupuesto</h1>
+        <p> Complete el siguiente formulario con los datos de su empresa y el motivo de su consulta. Me pondré en contacto en un plazo máximo de 24 horas hábiles para coordinar una entrevista inicial sin cargo.</p>
+        <h2>Escribinos</h2>
+        <form action="./contactos.html" method="post">
+
+            <label for="id-nombre-completo">Nombre completo</label>
+            <input type="text" name="nombre-completo" id="id-nombre-completo">
+
+            <label for="id-email">Email</label>
+            <input type="email" name="email" id="id-email">
+
+            <label for="id-telefono">Telefono de contacto (opcional)</label>
+            <input type="tel" name="telefono" id="id-telefono">
+
+            <label for="id-nombre-empresa">Nombre de la empresa</label>
+            <input type="text" name="nombre-empresa" id="id-nombre-empresa">
+
+            <label for="id-tamanio-empresa">Tamaño de la empresa</label>
+            <select name="tamanio-empresa" id="id-tamanio-empresa">
+                <option value="1-a-10">1 a 10 empleados</option>
+                <option value="11-a-50">11 a 50 empleados</option>
+                <option value="mas-50">mas de 50</option> 
+            </select>
+
+
+            <label for="id-comentarios">Comentarios</label>
+            <textarea name="comentarios" id="id-comentarios"></textarea>
+
+            <button type="submit">Enviar </button>
+            <button type="reset">Limpiar</button>
+
+        </form>
+       
+    </main>
+    
+    <footer>
+
+
+    </footer>
+</body>
+</html>
