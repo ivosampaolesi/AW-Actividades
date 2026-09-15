@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoria-LucasBenitez-Contacto</title>
+    <link rel="stylesheet" href="./recursos/estilos/contacto.css">
 </head>
 <body>
-    <header>
+    <header class="cabecera-principal">
         <a href="./index.html" aria-label="Vinculo al inicio">
              <img src="./recursos/imagenes/cybersecurity.webp" alt="Logo ciberseguridad">
         </a>
@@ -21,11 +22,11 @@
         </nav>
     </header>
     
-    <main>
+    <main class="contenido-principal">
         <h1>Solicitud de Consulta y Presupuesto</h1>
         <p> Complete el siguiente formulario con los datos de su empresa y el motivo de su consulta. Me pondré en contacto en un plazo máximo de 24 horas hábiles para coordinar una entrevista inicial sin cargo.</p>
         <h2>Escribinos</h2>
-        <form action="./contactos.html" method="post">
+        <form action="./contacto.html" method="post">
 
             <label for="id-nombre-completo">Nombre completo</label>
             <input type="text" name="nombre-completo" id="id-nombre-completo">
@@ -46,6 +47,7 @@
                 <option value="mas-50">mas de 50</option> 
             </select>
 
+            <section class="">
             <label for="">Servicio solicitado:</label>
 
             <label for="id-servicio-configuracion">Configuracion de redes</label>
@@ -62,6 +64,7 @@
 
            <label for="id-servicio-otro">Otro</label>
            <input type="radio" name="servicio" id="id-servicio-otro" value="otro">
+           </section>
 
            <label for="id-detalle-consulta">Detalle de la consulta</label>
            <textarea name="detalle-consulta" id="id-detalle-consulta"></textarea>
@@ -73,7 +76,7 @@
        
     </main>
     
-    <footer>
+    <footer class="pie-principal">
         <ul>
             <li>
                 <a href="https://instagram.com/LucasBciberseguridad">@LucasBciberseguridad</a>

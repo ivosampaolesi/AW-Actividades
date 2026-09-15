@@ -8,6 +8,7 @@
 html, body, h1, h2, h3, ul{
     padding: 0%;
     margin: 0%;
+    height: 100%;
 }
 
 /*de clase*/
@@ -36,6 +37,15 @@ html, body, h1, h2, h3, ul{
     padding: 20px;
     background-color: #7fb6ee9c;
    
+}
+.contenido-principal form input, label, h2{
+    display: flexbox;
+   padding: 5px 0px;
+}
+
+.contenido-principal section{
+    display: flex;
+    padding: 15px 0px;
 }
 
 .pie-principal{
