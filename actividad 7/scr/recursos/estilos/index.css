@@ -1,3 +1,9 @@
+
+
+@font-face{
+    font-family: Roboto;
+    src: url(./fuentes/Roboto-Regular.ttf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +11,11 @@
 }
 
 body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: rgb(168, 155, 144);
+    font-family: Roboto;
 }
 .encabezado-principal{
     position: sticky;
@@ -19,6 +29,7 @@ body{
 .encabezado-principal a img{
     height: 70px;
     width: 70px;
+    padding: 5px;
 }
 .encabezado-principal nav a {
     text-decoration: none;
@@ -26,16 +37,46 @@ body{
     font-size: 20px;
 }
 
+
+
 .contenido-principal{
+    height: 80vh;
+    padding: 20px 15px;
 
 }
+
+.contenido-principal section div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contenido-principal section article {
+    text-align: center; 
+}
+
+.contenido-principal section article img {
+    width: 80px; 
+    height: 80px;
+    margin: 15px 0;
+}
+
+
+
 .pie-principal{
+    height: 12vh;
     background-color: rgb(129, 109, 92);
+    
 }
 .pie-principal .mensajeria{
-    position: fixed; /* referencia es el viewport */
+    position: fixed; 
     bottom: 20px;
     right: 20px;
     height: 35px;
     width: 35px;
 }
+
+
+
+
