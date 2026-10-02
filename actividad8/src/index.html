@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Sustentable</title>
+    <!-- Se enlaza el codigo css-->
+    <link rel="stylesheet" href="./recursos/css/index.css">
+</head>
+<body>
+    <!-- Se cambia el div no semántico por <header> para definir el encabezado.
+         Se usa la clase .header para dar estilos al bloque del layout. -->
+    <header class="encabezado">
+        <!-- El isologotipo funciona como un enlace a la página principal.
+             El atributo 'alt' es crítico por razones de accesibilidad (lectores de pantalla)
+             y como texto alternativo si la imagen no logra cargar. -->
+        <a href="index.html">
+            <img src="./recursos/imagenes/logo-rs.svg" alt="Logo de Retiro Sustentable">
+        </a>
+        <nav>
+            <!-- Se completa el menú principal para que ambas páginas tengan la misma navegación -->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Se reemplaza el contenedor principal con <main>, agrupando el contenido más importante.
+         Se usa la clase .main para el bloque del layout. -->
+    <main class="contenido"> 
+        <h1>Catálogo de Cabañas</h1>
+        <p>Bienvenido a nuestro catálogo de cabañas. Explora nuestras opciones y encuentra la que mejor se adapte a tus necesidades.</p>
+        
+        <!-- Se utiliza <section> para agrupar temáticamente el listado de cabañas -->
+        <section>
+            <!-- Cada cabaña es una unidad de contenido independiente, por eso se utiliza <article> -->
+            <article>
+                <h2>Cabaña 1</h2>
+                <img src="./recursos/imagenes/modelo1.webp" alt="Vista exterior de la Cabaña 1 rodeada de naturaleza">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id aliquet urna. Donec et diam dolor.</p>
+                <p><strong>Precio por día:</strong> $15.000</p>
+                <!-- Enlace dirigido a la página de reservas -->
+                <a href="reservas.html">Reservar esta cabaña</a>
+            </article>
+
+            <article>
+                <h2>Cabaña 2</h2>
+                <img src="./recursos/imagenes/modelo2.webp" alt="Vista exterior de la Cabaña 2 con diseño moderno">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla suscipit semper. Curabitur sed tempor risus.</p>
+                <p><strong>Precio por día:</strong> $18.000</p>
+                <!-- Enlace dirigido a la página de reservas -->
+                <a href="reservas.html">Reservar esta cabaña</a>
+            </article>
+
+            <article>
+                <h2>Cabaña 3</h2>
+                <img src="./recursos/imagenes/modelo3.webp" alt="Vista exterior de la Cabaña 3 de estilo rústico">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor a nulla egestas commodo.</p>
+                <p><strong>Precio por día:</strong> $20.000</p>
+                <!-- Enlace dirigido a la página de reservas -->
+                <a href="reservas.html">Reservar esta cabaña</a>
+            </article>
+
+            <article>
+                <h2>Cabaña 4</h2>
+                <img src="./recursos/imagenes/modelo4.webp" alt="Vista exterior de la Cabaña 4 con amplios ventanales">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p><strong>Precio por día:</strong> $25.000</p>
+                <!-- Enlace dirigido a la página de reservas -->
+                <a href="reservas.html">Reservar esta cabaña</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Se reemplaza el <div> no semántico por <footer> para el pie de página.
+         Se usa la clase .footer para el bloque de layout. -->
+    <footer class="pie">
+        <p>&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

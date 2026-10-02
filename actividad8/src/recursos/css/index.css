@@ -1,0 +1,193 @@
+/* 
+  Se define la fuente importada en el proyecto. 
+*/
+@font-face {
+    font-family: 'Sora';
+    src: url(./fuentes/Sora-Regular.ttf);
+}
+
+/* =========================================
+   REGLAS DE TIPO (Arriba, por tener menor especificidad)
+   ========================================= */
+
+/* 
+  Selector universal para aplicar el modelo de caja alternativo.
+  box-sizing: border-box asegura que el padding y el border se incluyan 
+  en el tamaño total de los elementos, lo cual es vital para estructurar layouts.
+*/
+* {
+    box-sizing: border-box;
+    /* Reset de márgenes y paddings por defecto del navegador */
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+  Selector de tipo para el elemento raíz (html).
+  Se asigna la tipografía 'Sora' instalada en el proyecto y un tamaño
+  de fuente base general de 16px, de acuerdo a los requerimientos.
+*/
+html {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+}
+
+/* 
+  Se asegura que el body ocupe todo el alto de la ventana, permitiendo
+  que el footer pueda quedar al fondo.
+*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reglas básicas de tipo para imágenes y enlaces */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* Las anclas serán blancas por defecto ya que van sobre fondos oscuros o en botones */
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================
+   REGLAS DE CLASE (Abajo, por tener mayor especificidad)
+   Tres clases correspondientes a cada bloque del layout
+   ========================================= */
+
+/* 
+  1. Bloque: Encabezado (.header)
+  Se organiza el header con display: flex, el cual cambia su comportamiento
+  externo (sigue comportándose como bloque hacia afuera) e interno (los hijos
+  se alinean en fila automáticamente).
+  justify-content: space-between separa el logo de la navegación.
+  align-items: center centra los elementos verticalmente.
+*/
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Mismo color que el footer */
+    padding: 1rem 2rem;
+}
+
+.encabezado img {
+    height: 60px; /* cambiamos el tamaño del isologotipo */
+}
+
+.encabezado nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.encabezado nav a {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 
+  2. Bloque: Principal (.main)
+  flex-grow: 1 permite que el contenedor principal ocupe todo el espacio 
+  restante en la pantalla, empujando al footer hacia abajo si el contenido es escaso.
+*/
+.contenido {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+.contenido section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contenido section article{
+    background-color: #fff;
+    border: 1px solid #0c09091a;
+    padding: 25px;
+    width: calc(50% - 1rem); /* Divide el ancho en dos columnas */
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido section article h2{
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.contenido section article p{
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.contenido section article a{
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+    display: inline-block;
+    background-color: #27ae60;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.contenido section form{
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    max-width: 600px;
+    margin-top: 1.5rem;
+}
+
+.contenido section form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+.contenido section form div label{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+
+}
+.contenido section form div input,textarea{
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    font-family: inherit; /* Hereda la tipografía Sora */
+
+}
+
+.contenido section form div button{
+    padding: 0.75rem;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+
+}
+/* 
+  3. Bloque: Pie de página (.footer)
+  El fondo del footer es del mismo color que el del encabezado (#2c3e50).
+*/
+.pie {
+    background-color: #2c3e50; /* Mismo color que el header */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+
+
+
