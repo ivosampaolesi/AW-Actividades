@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retiro Sustentable - Reservas</title>
-    <!-- Se enlaza la hoja de estilos externa para mantener el mismo diseño global (mismo layout) -->
     <link rel="stylesheet" href="./recursos/css/index.css">
 </head>
+
 <body>
-    <!-- Se utiliza la etiqueta semántica <header> para definir el encabezado.
-         Se aplica la clase .header para mantener consistencia con el layout de la página de inicio. -->
+    <!--se cambia el div por el elemento semantico <header> para el encabezado-->
     <header class="encabezado">
-        <!-- El isologotipo como enlace al inicio. El atributo 'alt' asegura accesibilidad. -->
+        <!--colocamos el isologotipo como pedia en la consigna-->
         <a href="index.html">
             <img src="./recursos/imagenes/logo-rs.svg" alt="Logo de Retiro Sustentable">
         </a>
         <nav>
-            <!-- Menú principal completo, idéntico al de index.html -->
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-            </ul>
+            <a href="index.html">Inicio</a>
+            <a href="reservas.html">Reservas</a>
         </nav>
     </header>
 
-    <!-- La etiqueta <main> contiene el contenido central y exclusivo de la página -->
+    
     <main class="contenido">
         <h1>Reservas</h1>
         <h2>Contactanos</h2>
         
-        <!-- Se utiliza <section> para estructurar la sección que contiene el formulario -->
-        <section>
-            <!-- Se agrega un action (a modo de ejemplo) y se configura con method="POST" para un envío seguro -->
-            <form action="#" method="POST">
-                <!-- Para asegurar la accesibilidad, cada campo <input>/<textarea> tiene un 'id' que se enlaza
-                     al atributo 'for' de su <label> correspondiente. -->
-                <div>
-                    <label for="nombre">Nombre de la persona que consulta:</label>
-                    <input type="text" name="nombre" id="nombre" required>
-                </div>
-                
-                <div >
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" name="telefono" id="telefono" required>
-                </div>
-                
-                <div >
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                
-                <div>
-                    <label for="fecha_desde">Fecha desde:</label>
-                    <input type="date" name="fecha_desde" id="fecha_desde" required>
-                </div>
-                
-                <div>
-                    <label for="fecha_hasta">Fecha hasta:</label>
-                    <input type="date" name="fecha_hasta" id="fecha_hasta" required>
-                </div>
-                
-                <div>
-                    <label for="comentario">Comentario:</label>
-                    <textarea name="comentario" id="comentario" rows="4" required></textarea>
-                </div>
-                
-                <div>
-                    <!-- Botón para enviar los datos del formulario -->
-                    <button type="submit">Enviar Consulta</button>
-                </div>
-            </form>
-        </section>
+        <form action="./reservas.html" method="post">
+            <!-- definimos los atributos del form como el metodo de envio(post) -->
+             <!--creamos todos los inputs con sus nombre e ids y tambien les asignamos sus respectivas labels-->
+            <div>
+                <label for="id-nombre">Nombre de la persona que consulta:</label>
+                <input type="text" name="nombre" id="id-nombre">
+            </div>
+
+            <div>
+                <label for="id-telefono">Teléfono:</label>
+                <input type="tel" name="telefono" id="id-telefono">
+            </div>
+
+            <div>
+                <label for="id-email">Email:</label>
+                <input type="email" name="email" id="id-email">
+            </div>
+
+            <div>
+                <label for="id-fecha-desde">Fecha desde:</label>
+                <input type="date" name="fecha_desde" id="id-fecha-desde">
+            </div>
+
+            <div>
+                <label for="id-fecha-hasta">Fecha hasta:</label>
+                <input type="date" name="fecha_hasta" id="id-fecha-hasta">
+            </div>
+
+            <div>
+                <label for="id-comentario">Comentario:</label>
+                <textarea name="comentario" id="id-comentario"></textarea>
+            </div>
+
+            <div>
+                <button type="submit">Enviar Consulta</button>
+            </div>
+        </form>
+
     </main>
 
-    <!-- La etiqueta <footer> agrupa la información del pie de página -->
+    <!-- se cambia el div por el elemento semantico <footer> para el pie de pagina -->
     <footer class="pie">
         <p>&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
